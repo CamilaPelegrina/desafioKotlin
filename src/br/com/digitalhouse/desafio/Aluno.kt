@@ -1,13 +1,13 @@
 package br.com.digitalhouse.desafio
 
-class Aluno(var nome: String, var sobrenome: String, val codigo: Int) {
+class Aluno(var nome: String, var sobrenome: String, val codigoAl: Int) {
 
     override fun equals(other: Aluno) {
-        if (this.codigo == other.codigo) return true
+        if (this.codigoAl == other.codigoAl) return true
     }
 
     override fun toString(): String {
-        return "Aluno: $nome $sobrenome - $codigo"
+        return "Aluno: $nome $sobrenome - $codigoAl"
     }
 
 }
