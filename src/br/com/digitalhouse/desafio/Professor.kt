@@ -1,13 +1,9 @@
 package br.com.digitalhouse.desafio
 
-abstract class Professor(var nome: String, var sobrenome: String, var tempoDeCasa: Int, val codigoProf: Int) {
-
-    override fun equals(other: Professor) {
-        if (this.codigoProf == other.codigoProf) return true
-    }
+abstract class Professor(open var nome: String, open var sobrenome: String, open val codigoProf: Int) {
 
     override fun toString(): String {
-        return "Professor: $nome $sobrenome - $codigoProf"
+        return "Professor(a): $nome $sobrenome (Código: $codigoProf)"
     }
 
 }

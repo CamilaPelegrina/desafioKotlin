@@ -1,7 +1,13 @@
 package br.com.digitalhouse.desafio
 
-class Titular(var nome: String, var sobrenome: String, var tempoDeCasa: Int, val codigoProf: Int, var especialidade: String): Professor {
+import java.time.LocalDate
+import java.time.Period
+import java.util.*
 
+class Titular(override var nome: String = "", override var sobrenome: String = "", override val codigoProf: Int = -1, var especialidade: String = ""): Professor(nome, sobrenome, codigoProf) {
 
+    val dataEntrada = LocalDate.now()
+    var dataAtual = LocalDate.now()
+    var tempoDeCasa = Period.between(dataEntrada, dataAtual)
 
 }
