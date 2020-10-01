@@ -3,7 +3,6 @@ package br.com.digitalhouse.desafio
 class Curso(var nome: String, val codigoCur: Int, var quantidadeMaximaDeAlunos: Int) {
 
     var listaAlunos = mutableListOf<Aluno>()
-    //var quantidadeAlunos: Int = (listaAlunos.count())
     var professorTitular: Titular = Titular()
     var professorAdjunto: Adjunto = Adjunto()
 

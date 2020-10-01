@@ -26,7 +26,7 @@ fun main() {
     admin.matricularAluno(2, 20001)
 
     admin.matricularAluno(3, 20002)
-    admin.matricularAluno(4, 20002)
+    admin.matricularAluno(1, 20002)
     admin.matricularAluno(5, 20002)
 
 

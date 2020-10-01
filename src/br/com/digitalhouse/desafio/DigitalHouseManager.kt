@@ -6,7 +6,7 @@ class DigitalHouseManager() {
     var listaAlunos = mutableMapOf<Int, Aluno>()
     var listaProfessores = mutableMapOf<Int, Professor>()
     var listaCursos = mutableMapOf<Int, Curso>()
-    var listaMatriculas = mutableMapOf<Int, Matricula>()
+    var listaMatriculas = mutableMapOf<Matricula, Int>()
 
     fun registrarCurso(nome: String, codigoCur: Int, quantidadeMaximaDeAlunos: Int) {
 
@@ -56,7 +56,7 @@ class DigitalHouseManager() {
         var verificar = curso?.adicionarUmAluno()
         when {
             verificar!! -> {
-                listaMatriculas.put(codigoAluno, matricula)
+                listaMatriculas.put(matricula, codigoAluno)
                 if (aluno != null) {
                     curso?.listaAlunos?.add(aluno)
                 }
@@ -96,8 +96,11 @@ class DigitalHouseManager() {
     }
 
     fun consultarMatriculaAluno(codigoAluno: Int) {
-        var aluno = listaMatriculas[codigoAluno]
-        println(aluno)
+        for ((key, value) in listaMatriculas) {
+            if (codigoAluno == value) {
+                println(key)
+            }
+        }
     }
 
 }
